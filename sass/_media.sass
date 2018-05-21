@@ -1,0 +1,160 @@
+@import "vars"
+
+@media screen and (max-width: 768px)
+  .cloud, .about, .some-info, .triangle:before, header:after
+    display: none
+    
+  ul
+    visibility: hidden
+
+  figure, figcaption
+    background-color: #e2e5e8
+
+@media screen and (min-width: 768px) and (max-width: 1024px)
+  .wrapper
+    width: 100%
+  
+  .about, .some-info
+    display: none
+
+  article
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    .page
+      margin-left: 10%
+      width: 80%
+
+  .socials
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-end
+    width: auto
+    .social
+      margin-bottom: 2vh
+      max-width: 100%
+      img
+        width: 80%
+
+  .information
+    justify-content: flex-start
+    .author
+      margin-left: 10%
+
+  figcaption
+    display: flex
+    border-bottom: solid 1px #e2e5e8
+    justify-content: flex-start
+  
+  header
+    nav
+      border-bottom: 4px solid #c6defa
+      font-size: 18px
+      line-height: 4rem
+      div
+        min-width: 45px
+        line-height: 225%
+
+  .e-mark
+    order: 3
+
+  .p-mark
+    display: none
+
+  .menu
+    display: none
+
+  .cloud
+    display: flex
+    justify-content: center
+    padding: 0 3%
+    margin-bottom: 2vh
+
+@media screen and (min-width: 1024px)
+  main
+    display: flex
+    flex-direction: row-reverse
+    padding: 0 20%
+
+  .logo
+    max-height: 30vh
+
+  .wrapper
+    max-width: 70%
+
+  .socials
+    display: none
+
+  nav
+    align-items: center
+    max-height: 7vh
+    border-bottom: 4px solid #c6defa
+    .e-mark
+      display: none
+    .p-mark
+      display: none
+    .q-mark
+      display: none
+    .menu
+      display: none
+    ul
+      padding: 10% 0
+      font-size: 18px
+      max-width: 50%
+      margin: 0 auto
+
+  .information
+    justify-content: space-between
+    height: 2.5rem
+    .info-soc
+      display: flex
+      padding: 1rem 0
+      div
+        height: auto
+        img
+          max-width: 1.5rem
+          height: 1.5rem
+          margin-right: 0.25rem
+    .author
+      margin-left: 3%
+
+  .artilce-img
+    height: auto
+    display: block
+
+  figcaption
+    display: flex
+    border-bottom: solid 1px #e2e5e8
+    justify-content: flex-start
+
+  .strange
+    max-width: 30%
+    margin-left: 3%
+    padding: 0 0
+    span.article-header
+      display: flex
+      justify-content: flex-start
+      align-items: baseline
+      border-bottom: 5px $blue solid
+      font-family: Cantarell-adaptive
+      letter-spacing: -.03rem
+      // height: 5%
+      div
+        min-width: 15%
+        font-size: 20px
+        min-height: 100%
+        color: white
+        background: #7ca7d9
+        text-align: center
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 5px 0 
+      h2
+        display: block
+        color: $blue
+        text-transform: uppercase
+        margin: 0 2%
+        font-size: 18px
+    p
+      line-height: 18px

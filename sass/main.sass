@@ -1,0 +1,306 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "base"
+
+header
+  grid-area: header
+  .logo
+    display: flex
+    align-items: center
+    align-content: center
+    justify-content: center
+    padding: 1.5% 0
+    color: $blue
+    font-size: 22pt
+    font-family: 'TrendSans-One-adaptive'
+    font-weight: 500
+    text-transform: uppercase
+    .logo-img
+      background: url(../img/logo.png) no-repeat
+      background-position: center
+      min-width: 4.7rem
+      height: 4.7rem
+      margin: 0 5px
+  nav 
+    background: $blue
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    padding: 2px 0
+    min-height: 38px
+    margin-bottom: 3vh
+    font-family: "Arial Narrow", Arial, sans-serif
+    div
+      min-width: 30px
+      line-height: 150%
+      font-size: 20px
+      color: #608dc1
+      background: #7ca7d9
+      text-align: center
+      margin: 0 3px
+    .p-mark 
+      background: url('../img/pen.png') #7ca7d9 no-repeat
+      background-position: center
+    .menu
+      background: url('../img/menu.png') no-repeat
+      background-position: center
+
+ul
+  display: flex
+  margin: 0
+  padding: 0 10%
+  flex-direction: row
+  justify-content: space-between
+  list-style-type: none
+  min-width: 50%
+  flex-grow: 2
+
+nav
+  li
+    text-transform: uppercase
+    color: $white
+    &:hover
+      z-index: 10
+      background: #1da1f2
+
+.wrapper 
+  width: 90%
+  margin: 0 auto
+
+article
+  display: flex
+  flex-direction: column
+  margin:
+    bottom: 10%
+  width: 100%
+
+p
+  text-align: justify
+  word-spacing: 0.3rem
+    
+.information
+  display: flex
+  justify-content: space-between
+  border-bottom: 1px solid #e2e5e8
+  height: 3rem
+  .info-soc
+    display: none
+  div
+    margin: 1px
+    display: flex
+    align-items: center
+    align-content: center
+    justify-content: space-between
+    img
+      max-width: 1rem
+      height: 1rem
+      margin-right: 0.25rem
+
+.time, .author
+  font-family: 'ArialMt-adaptive'
+  font-style: normal
+  display: flex
+  justify-content: space-between
+  text-align: left
+
+figure
+  display: flex
+  flex-direction: column
+  margin: 0
+  width: 100%
+  justify-self: center
+  justify-content: center
+  img 
+    width: 100%
+    height: 80%
+  figcaption
+    color: #5d6871
+    background-color: inherit
+    font-size: 1.5rem
+    text-align: center
+    line-height: 2rem
+    padding: 0.625rem 0
+
+.socials
+  display: flex
+  justify-content: space-between
+  align-items: center
+  font-size: 1.25rem
+
+.social
+  display: flex
+  align-items: center
+  max-width: 19%
+  height: 30px
+  border-radius: 10%
+  color: white
+  justify-content: space-around
+  padding: 
+    right: 5px
+  img 
+    margin: 
+      right: 0.25rem
+    max-width: 100%
+    height: auto
+    display: block
+
+.facebook
+  background-color: #3b5998
+
+.google
+  background-color: #db4437
+
+.twitter
+  background-color: #1da1f2
+
+.yandex
+  background-color: #bd081c
+
+.vk
+  background-color: #185e81
+
+footer
+  display: none
+  
+.cloud
+  color: #880000
+
+
+.for-spinner
+  margin: 8% 0
+  display: flex
+  justify-content: center
+  .spinner
+    animation-name: spin
+    filter: grayscale(0.8)
+    animation-duration: 2000ms
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+
+@keyframes spin
+  from
+    transform: rotate(360deg)
+
+  to
+    transform: rotate(0deg)
+
+.nav-link
+  color: $white
+  text-decoration: none
+
+.social:hover
+  cursor: pointer
+  filter: grayscale(60%)
+
+.aside-mark-hov:hover
+  cursor: pointer
+  filter: brightness(140%)
+  color: $white
+
+.logo:hover
+  cursor: pointer
+
+.triangle
+  height: 0
+
+.triangle:before
+  content: ""
+  border-left: 1.2rem solid transparent
+  border-right: 1.2rem solid transparent
+  border-top: 1.2rem solid #c6defa
+  position: relative
+  top: -1.7vh
+  left: calc(50% - .65rem )
+
+header:after
+  content: ""
+  top: -2.8vh
+  left: calc(50% - .5rem )
+  position: relative
+  border-left: 1rem solid transparent
+  border-right: 1rem solid transparent
+  border-top: 1rem solid #6b9ad0
+
+$green: #1abc9c
+$green-darken: #16a085
+
+.cloud
+  min-width: 100%
+
+.breadcrumb
+  list-style-type: none
+  display: flex
+  justify-content: flex-start
+  flex-wrap: wrap
+  margin: 0
+  max-width: 100%
+  text-transform: none
+  padding-left: 0.7rem
+  padding-right: 0
+  font-size: 1rem
+  li
+    margin: .3rem 0.7rem .3rem 0
+    a
+      color: #FFF
+      display: block
+      background: $darkblue
+      text-decoration: none
+      position: relative
+      height: 1.5rem
+      line-height: 1.5rem
+      padding: 0 0.75rem 0 0
+      text-align: center
+      margin-right: 1.5rem
+      div
+        display: inline-table
+        width: 0.6rem
+        height: 0.6rem
+        background-color: white
+        border-radius: 50%
+        margin: 0 -0.7rem 0.07rem 1rem
+
+    a
+      &:after
+        content: ""
+        position: absolute
+        top: 0
+        border: 0 solid $darkblue
+        border-width: 0.75rem 0.9rem
+        width: 0
+        height: 0
+
+      &:before
+        content: ""
+        left: -0.7rem
+        position: absolute
+        top: 0
+        border: 0 solid $darkblue
+        border-width: 0.75rem 0.4rem
+
+      &:after
+        left: 100%
+        border-color: transparent
+        border-left-color: $darkblue
+
+      &:hover
+        background-color: $green
+
+        &:before
+          border-color: $green
+          border-left-color: $green
+
+        &:after
+          border-left-color: $green
+
+      &:active
+        background-color: $green-darken
+
+        &:before
+          border-color: $green-darken
+          border-left-color: $green-darken
+
+        &:after
+          border-left-color: $green-darken
+
+@import "media"
